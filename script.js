@@ -1,26 +1,20 @@
-var num1 = prompt("Enter a number: ")
-var opr = prompt("Enter any operator: +, -, *, / ")
-var num2 = prompt("Enter another number: ")
+const number1 = parseFloat(prompt('Enter first number: '));
+const operator = prompt('Enter operator ( either +, -, * or / ): ');
+const number2 = parseFloat(prompt('Enter second number: '));
 
-num1=parseFloat(num1);
-num2=parseFloat(num2);
+let result;
 
-if (opr == "+") 
-{
-	alert(num1 + num2)
-} 
-
-else if(opr == "-")
-{
-	alert(num1 - num2)
-} 
-
-else if(opr == "*")
-{
-	alert(num1 * num2)
-} 
-
-else if(opr == "/")
-{
-	alert(num1 / num2)
+if (operator == '+') {
+    result = number1 + number2;
 }
+else if (operator == '-') {
+    result = number1 - number2;
+}
+else if (operator == '*') {
+    result = number1 * number2;
+}
+else {
+    result = number1 / number2;
+}
+
+alert(`${number1} ${operator} ${number2} = ${result}`);
